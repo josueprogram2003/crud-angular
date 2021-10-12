@@ -1,0 +1,33 @@
+<div class="container d-flex justify-content-center">
+  <table class="table w-75 table-primary">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="w-75" *ngFor="let r of recibir; index as i">
+        <th scope="row">{{ i+1}}</th>
+        <td>{{ r.titulo }}</td>
+        <td>{{ r.stock }}</td>
+        <td>{{ r.descripcion }}</td>
+        <td>
+          <button
+            (click)="delete(r)"
+            class="text-center fondo__button"
+          >
+            <i class="bx bx-data w-100 d-block red"></i>
+          </button>
+
+          <button class="fondo__button" (click)="update(r)">
+            <i class="bx bx-up-arrow-circle green"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

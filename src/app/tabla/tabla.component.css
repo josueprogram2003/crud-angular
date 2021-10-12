@@ -1,0 +1,26 @@
+.fondo__button{
+  background: none;
+  border: none;
+}
+
+.red{
+  color: red;
+  display: inline-block;
+  font-size: 25px;
+  transition: all 0.3s ease;
+}
+
+.red:hover{
+  color: white;
+}
+
+.green{
+    color: green;
+    display: inline-block;
+    font-size: 25px;
+    transition: all 0.3s ease;
+}
+
+.green:hover{
+  color: white;
+}

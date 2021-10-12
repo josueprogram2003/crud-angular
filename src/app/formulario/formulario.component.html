@@ -1,0 +1,42 @@
+<div class="container d-flex justify-content-center mt-4">
+  <form class="w-50">
+    <div class="mb-3">
+      <input
+        name="titulo"
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Ingrese Titulo"
+        [(ngModel)]="titulo"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        name="stock"
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Ingrese Stock"
+        [(ngModel)]="stock"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        name="descripcion"
+        type="text"
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        placeholder="Ingrese Descripción"
+        [(ngModel)]="descripcion"
+      />
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-primary" (click)="agregar()">{{ button }}</button>
+    </div>
+  </form>
+</div>
+<app-tabla
+  [recibir]="libro"
+  (eliminar)="deleteLibro($event)"
+  (editar)="editarLibro($event)"
+></app-tabla>
